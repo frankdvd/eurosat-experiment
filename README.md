@@ -58,8 +58,15 @@ Evaluation the Experimental Design of Land Cover Classification Model
     python -m brainome login
     python -m brainome -vv -target class -o resnet-nn.py -f NN  ./data/resnet-output.csv
     ```
+1.  Training model with different hiden layer nodes
+    ```sh
+    for i in {1..15}
+    do
+        python -m model_baseline.mlp-eurosat --fc_nodes $i
+    done
+    ```
 
-1. run notebook under ./scripts/data_mec.ipynb to get dataset mec and Capacity Progression
+1. run notebook under ./scripts/data_mec.ipynb to get dataset mec, Capacity Progression and plots
 
 ### 4. Pretrained Model and Logs
 
